@@ -19,3 +19,6 @@ dev = [
 type = "color"
 background = "#1a1a2e"
 min_duration = 5.0
+text = "This demo loading Python with Pyodide may take up to 60 seconds to load."
+text_color = "#e8e8e8"
+text_size = 18

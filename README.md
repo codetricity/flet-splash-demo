@@ -28,7 +28,21 @@ uv run flet run main.py
 uv run fs-build web
 ```
 
-Output goes to `build/web/`. For a project site on GitHub Pages (served at `/<repo>/`), build with the same base path so assets load correctly:
+Output goes to `build/web/`. To run it locally with Python’s HTTP server:
+
+```bash
+cd build/web && python -m http.server 8000
+```
+
+Then open [http://localhost:8000](http://localhost:8000).
+
+**Tip:** After changing splash settings in `pyproject.toml` (text, colors, etc.), use `--clean` so the new config is injected. fs-build skips re-injection when it sees an existing `build/flutter`, so a normal `fs-build web` won’t pick up config changes. Run:
+
+```bash
+uv run fs-build web --clean
+```
+
+For a project site on GitHub Pages (served at `/<repo>/`), build with the same base path so assets load correctly:
 
 ```bash
 uv run fs-build web --base-url /flet-splash-assess/
