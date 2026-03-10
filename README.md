@@ -2,6 +2,8 @@
 
 A small test project for [flet-splash](https://github.com/brunobrown/flet-splash): unified, customizable splash screens for Flet apps. This repo checks that flet-splash works with a minimal Flet app and that the web build can be deployed to GitHub Pages.
 
+**Live site:** [https://codetricity.github.io/flet-splash-demo/](https://codetricity.github.io/flet-splash-demo/)
+
 ## What this does
 
 - Runs a minimal Flet app with flet-splash (color type, dark background, 5s minimum) configured in `pyproject.toml`.
@@ -43,5 +45,6 @@ Replace `flet-splash-assess` with your GitHub repo name if different.
 
 ## Links
 
+- **Live site:** [https://codetricity.github.io/flet-splash-demo/](https://codetricity.github.io/flet-splash-demo/)
 - [flet-splash](https://github.com/brunobrown/flet-splash) — splash screen injection for Flet
 - [Flet](https://flet.dev/) — Python UI framework
