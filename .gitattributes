@@ -1,3 +1,0 @@
-# Git LFS – Flet web app package (exceeds GitHub 100MB limit)
-docs/assets/app/app.zip filter=lfs diff=lfs merge=lfs -text
-docs/assets/app/app.zip.hash filter=lfs diff=lfs merge=lfs -text

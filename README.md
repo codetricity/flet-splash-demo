@@ -26,13 +26,20 @@ uv run flet run main.py
 uv run fs-build web
 ```
 
-Output goes to `build/web/`. To publish on GitHub Pages from `docs/`, copy the contents of `build/web/` into `docs/` (or configure your repo to serve from another branch/folder).
+Output goes to `build/web/`. For a project site on GitHub Pages (served at `/<repo>/`), build with the same base path so assets load correctly:
+
+```bash
+uv run fs-build web --base-url /flet-splash-assess/
+```
+
+Replace `flet-splash-assess` with your GitHub repo name if different.
 
 ## GitHub Pages
 
-- The live site is served from the **`docs/`** directory.
-- At this stage the web build has been added to `docs/` **manually** (e.g. by copying from `build/web/` after `fs-build web`).
-- If this approach works well, the next step is to automate deployment with **GitHub Actions** (build and update `docs/` or push to a `gh-pages` branch).
+- A **GitHub Action** (`.github/workflows/deploy-pages.yml`) builds the web app and deploys to GitHub Pages on push to `main`.
+- The build uses `--base-url /<repo-name>/` so assets and the app load correctly at `https://<owner>.github.io/<repo>/` (project site). Without this, you get 404s for `manifest.json`, splash images, etc.
+- In the repo **Settings → Pages**, set **Source** to **GitHub Actions** so the workflow can deploy.
+- The workflow does not use the `docs/` folder; you can remove the manually copied `docs/` contents from the repo if you no longer need them.
 
 ## Links
 
