@@ -1,0 +1,21 @@
+[project]
+name = "flet-splash-assess"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flet>=0.82.2",
+    "flet-splash>=0.2.2",
+]
+
+[dependency-groups]
+dev = [
+    "flet-cli>=0.82.2",
+    "flet-desktop>=0.82.2",
+]
+
+[tool.flet.splash]
+type = "color"
+background = "#1a1a2e"
+min_duration = 5.0
