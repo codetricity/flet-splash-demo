@@ -32,6 +32,12 @@ jobs:
       - name: Install dependencies
         run: uv sync
 
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.41.4"
+          cache: true
+
       - name: Build for web (with base URL for project Pages)
         run: >
           uv run fs-build web
