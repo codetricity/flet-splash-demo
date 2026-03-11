@@ -16,9 +16,11 @@ dev = [
 ]
 
 [tool.flet.splash]
-type = "color"
+type = "image"
+source = "assets/splash.jpg"
 background = "#1a1a2e"
-min_duration = 5.0
-text = "This demo loading Python with Pyodide may take up to 60 seconds to load."
+min_duration = 10.0
+text = "Demo loading Python with Pyodide. A white screen may appear for up to 60 seconds."
 text_color = "#e8e8e8"
 text_size = 18
+fade_duration = 0.5
